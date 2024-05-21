@@ -191,7 +191,7 @@ class Ahut
   }
   public function checkAdmin()
   {
-    if (isset($_SESSION['user'])) {
+    if (isset($_SESSION['user'])){
 
       $db = new DataBases();
       $user = $db->select('SELECT * FROM users WHERE id = ?', [$_SESSION['user']])->fetch();
