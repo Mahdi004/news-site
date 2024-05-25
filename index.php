@@ -35,6 +35,7 @@ require_once 'database/DataBases.php';
 require_once 'activities/Admin/Admin.php';  
 require_once 'activities/Admin/Category.php';
 require_once 'activities/Admin/Post.php';
+require_once 'activities/Admin/Dashbord.php';
 require_once 'activities/Admin/Baners.php';
 require_once 'activities/Admin/Comments.php';
 require_once 'activities/Admin/Users.php';
@@ -218,6 +219,10 @@ function dd($var){
   var_dump($var);
   die();
 }
+
+// dashbord
+
+uri('admin' , 'Admin\Dashbord' , 'index');
 
 // category
 uri('admin/category' , 'Admin\Category' , 'index');

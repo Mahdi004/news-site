@@ -42,7 +42,7 @@ require_once (BASE_PATH ."/template/admin/layouts/haeder.php");
             <?= $comment['status'] ?>
           </td>
           <td>
-            <?php if ($comment['status'] == 'unseen') { ?>
+            <?php if ($comment['status'] == 'seen') { ?>
               <a role="button" class="btn btn-sm btn-success text-white"
                 href="<?= url('admin/comments/status/' . $comment['id']) ?>">click to approved</a>
             <?php
