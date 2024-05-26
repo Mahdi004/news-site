@@ -90,12 +90,12 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
                 <?= $MostViewedPost['id'] ?>
               </td>
               <td>
-              <?= $MostViewedPost['title'] ?>
+                <?= $MostViewedPost['title'] ?>
               </td>
               <td><span class="badge badge-secondary"><?= $MostViewedPost['view'] ?></span></td>
             </tr>
 
-          <?php
+            <?php
           }
           ?>
         </tbody>
@@ -117,19 +117,19 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
           </tr>
         </thead>
         <tbody>
-
-          <tr>
-            <td>
-              <a class="text-primary" href="">
-                ss
-              </a>
-            </td>
-            <td>
-              ss
-            </td>
-            <td><span class="badge badge-success">ss</span></td>
-          </tr>
-
+          <?php foreach ($MostCommentedPosts as $MostCommentedPost) { ?>
+            <tr>
+              <td>
+                  <?= $MostCommentedPost['id'] ?>
+              </td>
+              <td>
+              <?= $MostCommentedPost['title'] ?>
+              </td>
+              <td><span class="badge badge-success"><?= $MostCommentedPost['comment_count'] ?></span></td>
+            </tr>
+            <?php
+          }
+          ?>
 
         </tbody>
       </table>
@@ -151,22 +151,24 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
         </thead>
         <tbody>
 
+        <?php foreach($Comments as $Comment){ ?>
 
           <tr>
             <td>
-              <a class="text-primary" href="">
-                ss
-              </a>
+              <?= $Comment['id'] ?>
             </td>
             <td>
-              ss
+            <?= $Comment['username'] ?>
             </td>
             <td>
-              ss
+            <?= substr($Comment['comments'],0,10) . "...." ?>
             </td>
-            <td><span class="badge badge-warning">ss</span></td>
+            <td><span class="badge badge-warning"><?= $Comment['status'] ?></span></td>
           </tr>
 
+          <?php
+          }
+          ?>
 
         </tbody>
       </table>
