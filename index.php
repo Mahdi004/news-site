@@ -42,6 +42,10 @@ require_once 'activities/Admin/Users.php';
 require_once 'activities/Admin/Menu.php';
 require_once 'activities/Admin/Websetting.php';
 
+
+// Home
+require_once 'activities/App/Home.php';
+
 // $db = new database\DataBases;
 
 // Ahut
@@ -290,5 +294,13 @@ uri('forgot/request' , 'Ahut\Ahut' , 'forgotRequest' , 'POST');
 uri('reset-password-form/{forgor_token}' , 'Ahut\Ahut' , 'resetPasswordView');
 uri('reset-password/{forgor_token}' , 'Ahut\Ahut' , 'resetPassword' , 'POST');
 
+
+// App
+
+uri('/' , 'App\Home' , 'index');
+uri('/home' , 'App\Home' , 'index');
+uri('/show-post/{id}' , 'App\Home' , 'show');
+uri('/show-category/{id}' , 'App\Home' , 'category');
+uri('/comment-storm' , 'App\Home' , 'commentStorm' , 'POST');
 
 echo '404 - not finde';
