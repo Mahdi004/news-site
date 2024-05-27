@@ -45,6 +45,31 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
         <input type="file" id="icon" name="icon" class="form-control-file" autofocus>
       </div>
 
+      <div class="form-group">
+        <label for="keywords">Facebook</label>
+        <input type="text" class="form-control" id="facebook" name="facebook" value="<?= $websetting['facebook']?>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="keywords">Twitter</label>
+        <input type="text" class="form-control" id="twitter" name="twitter" value="<?= $websetting['twitter']?>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="keywords">Telegram</label>
+        <input type="text" class="form-control" id="telegram" name="telegram" value="<?= $websetting['telegram']?>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="keywords">Instagram</label>
+        <input type="text" class="form-control" id="instagram" name="instagram" value="<?= $websetting['instagram']?>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="keywords">PhoneNumber</label>
+        <input type="text" class="form-control" id="phone_number" name="phone_number" value="<?= $websetting['phone_number']?>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="keywords">EmailAdres</label>
+        <input type="text" class="form-control" id="email_adres" name="email_adres" value="<?= $websetting['email_adres']?>" autofocus>
+      </div>
+
       <button type="submit" class="btn btn-primary btn-sm">set</button>
     </form>
   </section>

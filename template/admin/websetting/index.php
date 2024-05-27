@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
 ?>
 
@@ -20,21 +20,21 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
     <tbody>
 
       <tr>
-        <td>title</td>
+        <td>Title</td>
         <td>
           <?= $websetting['title'] ?>
         </td>
       </tr>
       <tr>
-        <td>description</td>
+        <td>Description</td>
         <td>
-        <?= $websetting['description'] ?>
+          <?= $websetting['description'] ?>
         </td>
       </tr>
       <tr>
-        <td>key words</td>
+        <td>Key words</td>
         <td>
-        <?= $websetting['keywords'] ?>
+          <?= $websetting['keywords'] ?>
         </td>
       </tr>
       <tr>
@@ -45,9 +45,45 @@ require_once (BASE_PATH . '/template/admin/layouts/haeder.php');
         <td>Icon</td>
         <td><img src="<?= asset($websetting['icon']) ?>" alt="" width="100px" height="100px"> </td>
       </tr>
+      <tr>
+        <td>Facebook</td>
+        <td>
+          <?= $websetting['facebook'] ?>
+        </td>
+      </tr>
+      <tr>
+        <td>Twitter</td>
+        <td>
+          <?= $websetting['twitter'] ?>
+        </td>
+      </tr>
+      <tr>
+        <td>Telegram</td>
+        <td>
+          <?= $websetting['telegram'] ?>
+        </td>
+      </tr>
+      <tr>
+        <td>Instagram</td>
+        <td>
+          <?= $websetting['instagram'] ?>
+        </td>
+      </tr>
+      <tr>
+        <td>PhoneNumber</td>
+        <td>
+          <?= $websetting['phone_number'] ?>
+        </td>
+      </tr>
+      <tr>
+        <td>EmailAdres</td>
+        <td>
+          <?= $websetting['email_adres'] ?>
+        </td>
+      </tr>
     </tbody>
   </table>
 </section>
-<?php 
+<?php
 require_once (BASE_PATH . '/template/admin/layouts/footer.php');
 ?>

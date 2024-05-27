@@ -29,7 +29,7 @@ class Post extends Admin{
   public function store($reques){
 
     $realTimestamp = substr($reques['published_at'], 0 , 10);
-    $reques['published_at'] = date('Y-m-d H:i:s' , (int)$realTimestamp);
+    $reques['published_at'] = date('Y/m/d H:i:s' , (int)$realTimestamp);
     $db = new DataBases();
 
     if($reques['cat_id'] != null){
@@ -69,7 +69,7 @@ class Post extends Admin{
   public function update( $reques, $id){
     date_default_timezone_set('Iran');
     $realTimestamp = substr($reques['published_at'] , 0 , 10);
-    $reques['published_at'] = date('Y-m-d H:i:s' , (int)$realTimestamp);
+    $reques['published_at'] = date('Y/m/d H:i:s' , (int)$realTimestamp);
 
     $db = new DataBases();  
     if($reques['cat_id'] != null){

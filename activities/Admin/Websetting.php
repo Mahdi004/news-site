@@ -53,6 +53,7 @@ class Websetting extends Admin{
 
     }
     $this->redirect('admin/websetting');
+    // dd($reques);
     
 
 
